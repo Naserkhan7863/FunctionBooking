@@ -1,0 +1,282 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Azenta Template">
+    <meta name="keywords" content="Azenta, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weddingzz | Halls</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'main/css/font-awesome.min.css' %}"type="text/css">
+    <link rel="stylesheet" href="{% static 'main/css/elegant-icons.css' %}"type="text/css">
+    <link rel="stylesheet" href="{% static 'main/css/themify-icons.css' %}"type="text/css">
+    <link rel="stylesheet" href="{% static 'main/css/nice-select.css' %}"type="text/css">
+    <link rel="stylesheet" href="{% static 'main/css/jquery-ui.min.css' %}"type="text/css">
+    <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}"type="text/css">
+    <link rel="stylesheet" href="{% static 'main/css/magnific-popup.css' %}"type="text/css">
+    <link rel="stylesheet" href="{% static 'main/css/slicknav.min.css' %}"type="text/css">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}"type="text/css">
+</head>
+
+<b>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+  
+    <!-- Header Section Begin -->
+    <header class="header-section header-normal">
+        <div class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <nav class="main-menu">
+
+                            <ul>
+
+                                <li><a href="{% url 'index' %}"><h3 class="text-white">WEDDINGZZ HALL</h3></a></li>
+                                <li><a href="{% url 'index' %}">Home</a></li>
+
+                                <li><a href="{% url 'function_halls' %}">Function Halls</a></li>
+                                <li  class="active"><a href="{% url 'services' %}">Services</a></li>
+
+                                <li><a href="{% url 'about' %}">About</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="col-lg-3">
+                        <div class="top-right mt-2">
+                            <div class="language-option">
+                               
+                                <span>LOGIN</span>
+                                <i class="fa fa-angle-down"></i>
+                                <div class="flag-dropdown">
+                                    <ul>
+                                        
+                                        <li><a href="{% url 'user_login' %}">User</a></li>
+
+                                        <li><a href="{% url 'admin_login' %}">Admin</a></li>
+        
+                                        <li><a href="{% url 'banquet_login' %}">Function Hall</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="/main/index.html" class="property-sub">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+       
+     </div>
+    </header>
+  
+    <!-- Header End -->
+
+    <div class="tab-item-content">
+        <div class="tab-content">
+            <div class="tab-pane fade-in active" id="tab-1" role="tabpanel">
+                <div class="pd-table-desc">
+                    <section class="blog-details-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 offset-lg-1">
+                                    <div class="leave-comment">
+
+                                     
+                                        <h4 style="color:skyblue">Add Service Details</h4>
+
+                                        <form action="#" method="post" enctype="multipart/form-data">
+                                            {% csrf_token %}
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-floating">
+                                                        <select class="form-select" name="service_type" >
+                                                            <option selected disabled>Select Service Type</option>
+                                                            <option>Wood</option>
+                                                            <option>Water</option>
+                                                            <option>Waiters</option>
+                                                            <option>Decorators</option>
+                                                            <option>Grooming Partners</option>
+                                                            <option>Dj's & Aurgestra</option>
+
+                
+                
+                                                        </select>
+                                                       
+                                                    </div>
+                                                </div>
+
+                                                
+                                               
+
+                                              
+                                               
+
+                                                <div class="col-lg-6">
+                                                    <input type="text" placeholder="Name Of Org"
+                                                        name='org'>
+                                                </div>
+                                               
+                                                   
+                                             
+                                                <div class="col-lg-6">
+                                                    <input type="tel" placeholder="Price"
+                                                        name='price'>
+                                                </div>
+                                               
+                                                <div class="col-lg-6">
+                                               
+                                                    <input class="form-control form-control-lg "
+                                                        id="formFileLg" type="file"
+                                                        name='image'  >
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="tel" placeholder="Phone Number"
+                                                        name='contact'>
+                                                </div>
+
+                                                <div class="col-lg-6">
+                                                    <input type="text" placeholder="Email Address"
+                                                        name='email'>
+                                                </div>
+
+
+
+                                          
+                                                </div>
+                                                <div class="col-12 mb-3">
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control"
+                                                            placeholder="Description"
+                                                            id="description" name="description"
+                                                            style="height: 90px;font-weight:lighter;"></textarea>
+                                                        <label for="description">
+                                                            Description</label>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="">
+                                                   <center> <button style="font-size:large"
+                                                        type="submit" class="site-btn w-50 ">Add Service</button></center>
+                                                </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+       
+
+        </div>
+
+
+    </div>
+     <!-- Footer Section Begin -->
+     <footer class="footer-section set-bg" data-setbg="{% static 'main/img/footer-bg.jpg' %}">
+        <div class="container">
+            <div class="footer-text">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="footer-logo">
+                            <div class="logo">
+                                <h4 style="color: aliceblue;"> Weddingzz Halls  </h4>
+
+                            </div>
+                            <p>Subscribe our newsletter gor get notification about new updates.</p>
+                            <form action="#" class="newslatter-form">
+                                <input type="text" placeholder="Enter your email...">
+                                <button type="submit"><i class="fa fa-location-arrow"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="footer-widget">
+                            <h4> Top Cities  </h4>
+                            <ul>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Hyderabad</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Secundrabad</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Warangal</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Mumbai</a></li>
+                            </ul>
+                            <ul>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Mumbai</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Warangal</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Secundrabad</a></li>
+                                <li><i class="fa fa-caret-right"></i> <a href="#">Hyderabad</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="footer-widget">
+                            <h4>Social</h4>
+                            <ul class="social">
+                                <li><i class="ti-facebook"></i> <a href="#">Facebook</a></li>
+                                <li><i class="ti-instagram"></i> <a href="#">Instagram</a></li>
+                                <li><i class="ti-twitter-alt"></i> <a href="#">Twitter</a></li>
+                                <li><i class="ti-google"></i> <a href="#">Google+</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="footer-widget">
+                            <h4>Contact Us</h4>
+                            <ul class="contact-option">
+                                <li><i class="fa fa-map-marker"></i>Hyderabad,Pin Code:500074. T.S.</li>
+
+                                <li><i class="fa fa-phone"></i> 8555887986</li>
+                                <li><i class="fa fa-envelope"></i> info@codebook.in</li>
+                                <li><i class="fa fa-clock-o"></i> Mon - Sat, 08 AM - 06 PM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-text">
+                <p>
+                <p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | CodeBook <i class="ti-heart" aria-hidden="true"></i>  <a href="https://colorlib.com"
+                        target="_blank "></a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="{% static 'main/js/jquery-3.3.1.min.js'  %}"></script>
+    <script src="{% static 'main/js/bootstrap.min.js'  %}"></script>
+    <script src="{% static 'main/js/jquery.magnific-popup.min.js'  %}"></script>
+    <script src="{% static 'main/js/jquery.nice-select.min.js'  %}"></script>
+    <script src="{% static 'main/js/jquery.slicknav.js'  %}"></script>
+    <script src="{% static 'main/js/jquery-ui.min.js'  %}"></script>
+    <script src="{% static 'main/js/owl.carousel.min.js'  %}"></script>
+    <script src="{% static 'main/js/main.js'  %}"></script>
+</body>
+
+
+</html>
